@@ -5,22 +5,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import java.util.List;
 
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class WeatherResponse {
-    @JsonProperty("weather")
-    private List<WeatherDto> weatherDtoList;
+public class SysDto {
 
-    @JsonProperty("cod")
-    private int httpCode;
+    @JsonProperty("sunrise")
+    private String sunriseTimestamp;
 
-    @JsonProperty("dt")
-    private String timestamp;
-
-    @JsonProperty("sys")
-    private SysDto sysDto;
+    @JsonProperty("sunset")
+    private String sunsetTimestamp;
 }
