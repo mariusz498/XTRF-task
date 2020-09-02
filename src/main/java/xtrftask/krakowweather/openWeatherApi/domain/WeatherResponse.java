@@ -23,4 +23,7 @@ public class WeatherResponse {
 
     @JsonProperty("sys")
     private SysDto sysDto;
+
+    @JsonProperty("main")
+    private MainDto mainDto;
 }

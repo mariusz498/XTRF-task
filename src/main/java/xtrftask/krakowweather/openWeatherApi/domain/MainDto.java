@@ -10,11 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class SysDto {
+public class MainDto {
 
-    @JsonProperty("sunrise")
-    private long sunriseTimestamp;
-
-    @JsonProperty("sunset")
-    private long sunsetTimestamp;
+    @JsonProperty("temperature")
+    private double temperature;
 }
