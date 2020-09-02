@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "xtrf.endpoint",
+      "type": "java.lang.String",
+      "description": "XTRF talent task endpoint."
+    },
+    {
+      "name": "openweather.api.key",
+      "type": "java.lang.String",
+      "description": "Free user key fo OpenWeather API."
+    },
+    {
+      "name": "openweather.endpoint",
+      "type": "java.lang.String",
+      "description": "OpenWeather API endpoint."
+    }
+  ] }
