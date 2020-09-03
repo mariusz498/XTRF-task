@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MainDto {
+public class MainData {
 
     @JsonProperty("temperature")
     private double temperature;

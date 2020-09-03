@@ -13,7 +13,7 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WeatherResponse {
     @JsonProperty("weather")
-    private List<WeatherDto> weatherDtoList;
+    private List<WeatherData> weatherDataList;
 
     @JsonProperty("cod")
     private int httpCode;
@@ -22,10 +22,10 @@ public class WeatherResponse {
     private String timestamp;
 
     @JsonProperty("sys")
-    private SysDto sysDto;
+    private SystemData systemData;
 
     @JsonProperty("main")
-    private MainDto mainDto;
+    private MainData mainData;
 
     @JsonProperty("timezone")
     private int timezoneShift;

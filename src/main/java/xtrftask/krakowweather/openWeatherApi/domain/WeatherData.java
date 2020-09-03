@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class WeatherDto {
+public class WeatherData {
 
     @JsonProperty("main")
     private String mainCondition;
