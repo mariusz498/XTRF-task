@@ -19,7 +19,7 @@ public class WeatherResponse {
     private int httpCode;
 
     @JsonProperty("dt")
-    private String timestamp;
+    private long timestamp;
 
     @JsonProperty("sys")
     private SystemData systemData;
