@@ -1,13 +1,12 @@
 package xtrftask.krakowweather.mapper;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.time.LocalDateTime;
-import java.util.Date;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -19,9 +18,8 @@ private UnixToDateMapper mapper;
     @Test
     public void testMapper() {
         //When
-        LocalDateTime date = mapper.date(1599019038);
+        String date = mapper.date(1599116504, 7200);
         //Then
-        System.out.println(date);
-        //TODO better tests
+        Assert.assertEquals("2020-09-03 09:01:44", date);
     }
 }

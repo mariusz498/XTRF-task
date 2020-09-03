@@ -26,4 +26,7 @@ public class WeatherResponse {
 
     @JsonProperty("main")
     private MainDto mainDto;
+
+    @JsonProperty("timezone")
+    private int timezoneShift;
 }
