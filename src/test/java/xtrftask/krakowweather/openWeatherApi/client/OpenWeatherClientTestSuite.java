@@ -12,7 +12,7 @@ import xtrftask.krakowweather.openWeatherApi.domain.WeatherResponse;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class OponWeatherClientTestSuite {
+public class OpenWeatherClientTestSuite {
 
     @Autowired
     public OpenWeatherClient openWeatherClient;
