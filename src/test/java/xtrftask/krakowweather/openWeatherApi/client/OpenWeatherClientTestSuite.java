@@ -1,9 +1,7 @@
 package xtrftask.krakowweather.openWeatherApi.client;
 
 import org.junit.Assert;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,9 +14,6 @@ public class OpenWeatherClientTestSuite {
 
     @Autowired
     public OpenWeatherClient openWeatherClient;
-
-    @Rule
-    public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void getCurrentWeatherTest(){

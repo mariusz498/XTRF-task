@@ -28,8 +28,6 @@ public class XtrfClient {
     public boolean postCurrentWeather(CurrentWeatherDto currentWeatherDto) throws JsonProcessingException {
         try {
             HttpEntity<String> httpEntity = jsonMapper.mapToJson(currentWeatherDto);
-            //TODO: remove System.out.println
-            System.out.println(httpEntity);
             ResponseEntity<String> response = restTemplate.exchange(config.getEndpoint(), HttpMethod.POST, httpEntity, String.class);
             if(response.getStatusCode().is2xxSuccessful()) {
                 return true;
