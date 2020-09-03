@@ -1,17 +1,10 @@
 package xtrftask.krakowweather.openWeatherApi.client;
 
-import xtrftask.krakowweather.openWeatherApi.domain.WeatherResponse;
+import org.springframework.web.client.RestClientException;
 
-public class UnexpectedResponseException extends Exception {
+public class UnexpectedResponseException extends RestClientException {
 
-    private final WeatherResponse response;
-
-    public UnexpectedResponseException(WeatherResponse response) {
-        this.response = response;
+    public UnexpectedResponseException(String msg) {
+        super(msg);
     }
-
-    public void printResponse() {
-        //TODO: print response code and message
-    }
-
 }
