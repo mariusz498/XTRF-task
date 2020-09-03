@@ -26,11 +26,11 @@ public class OpenWeatherClientTestSuite {
         WeatherResponse response = openWeatherClient.getCurrentWeather("Krakow", "pl");
         //Then
         Assert.assertEquals(200, response.getHttpCode());
-        Assert.assertNotNull(response.getWeatherDataList().get(0).getMainCondition());
-        Assert.assertFalse(response.getTimestamp().isEmpty());
-        Assert.assertTrue(response.getSystemData().getSunriseTimestamp() > 0);
-        Assert.assertTrue(response.getSystemData().getSunsetTimestamp() > 0);
-        Assert.assertTrue(-50.0 < response.getMainData().getTemperature());
-        Assert.assertTrue(60.0 > response.getMainData().getTemperature());
+        Assert.assertFalse(response.getWeatherDataList().get(0).getMainCondition().isEmpty());
+        Assert.assertTrue(response.getTimestamp() > 0L);
+        Assert.assertTrue(response.getSystemData().getSunriseTimestamp() > 0L);
+        Assert.assertTrue(response.getSystemData().getSunsetTimestamp() > 0L);
+        Assert.assertTrue(-50 < response.getMainData().getTemperature());
+        Assert.assertTrue(60 > response.getMainData().getTemperature());
     }
 }

@@ -16,7 +16,7 @@ public class UnixToDateMapperTestSuite {
 private UnixToDateMapper mapper;
 
     @Test
-    public void testMapper() {
+    public void testDateMapping() {
         //When
         String date = mapper.date(1599116504, 7200);
         //Then
