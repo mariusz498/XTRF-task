@@ -10,7 +10,7 @@ import xtrftask.krakowweather.mapper.OpenWeatherDataMapper;
 import xtrftask.krakowweather.openWeatherApi.client.OpenWeatherClient;
 
 @Service
-public class KrakowWeatherService {
+public class WeatherService {
 
     @Autowired
     OpenWeatherClient client;
@@ -24,11 +24,17 @@ public class KrakowWeatherService {
     @Autowired
     XtrfClient xtrfClient;
 
-    public CurrentWeather fetchCurrentWeatherForKrakow() {
-        return openWeatherDataMapper.mapToCurrentWeather(client.getCurrentWeather("Krakow", "pl"));
+    public CurrentWeather fetchCurrentWeather(String city, String countyCode) {
+        return openWeatherDataMapper.mapToCurrentWeather(client.getCurrentWeather(city, countyCode));
     }
 
-    public void postCurrentWeather(CurrentWeather currentWeather) throws JsonProcessingException {
-        xtrfClient.postCurrentWeather(currentWeatherMapper.mapToCurrentWeatherDto(currentWeather));
+    public boolean postCurrentWeather(CurrentWeather currentWeather) {
+        try {
+            return xtrfClient.postCurrentWeather(currentWeatherMapper.mapToCurrentWeatherDto(currentWeather));
+        }
+        catch (JsonProcessingException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 }
