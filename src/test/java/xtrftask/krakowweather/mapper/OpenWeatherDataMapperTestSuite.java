@@ -11,7 +11,6 @@ import xtrftask.krakowweather.openWeatherApi.domain.MainData;
 import xtrftask.krakowweather.openWeatherApi.domain.SystemData;
 import xtrftask.krakowweather.openWeatherApi.domain.WeatherData;
 import xtrftask.krakowweather.openWeatherApi.domain.WeatherResponse;
-
 import java.util.ArrayList;
 import java.util.List;
 
