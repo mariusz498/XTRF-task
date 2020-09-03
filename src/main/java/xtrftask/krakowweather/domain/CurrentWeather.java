@@ -13,7 +13,7 @@ public class CurrentWeather {
 
     private int httpCode;
     private String weatherCondition;
-    private double temperature;
+    private int temperature;
     private long timestamp;
     private String sunriseDateTime;
     private String sunsetDateTime;

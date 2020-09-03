@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class CurrentWeatherDto {
 
     private String currentWeather;
-    private double currentTemperature;
+    private int currentTemperature;
     private long timestamp;
     private String sunrise;
     private String sunset;

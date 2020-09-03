@@ -12,7 +12,7 @@ public class WeatherPostingScheduler {
     @Autowired
     KrakowWeatherService service;
 
-    @Scheduled(cron = "0 0 10 * * *")
+    @Scheduled(cron = "0 0 12 * * *")
     public void postWeather() throws JsonProcessingException {
         service.postCurrentWeather(service.fetchCurrentWeatherForKrakow());
     }

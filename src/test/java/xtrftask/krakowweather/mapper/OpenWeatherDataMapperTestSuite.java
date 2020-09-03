@@ -28,14 +28,14 @@ public class OpenWeatherDataMapperTestSuite {
         List<WeatherData> weatherDataList= new ArrayList<>();
         weatherDataList.add(new WeatherData("Cloudy"));
         SystemData systemData = new SystemData(1599105527, 1599153650);
-        MainData mainData = new MainData(15.4);
+        MainData mainData = new MainData(15);
         WeatherResponse openWeatherData = new WeatherResponse(weatherDataList, 200, 1599132348, systemData, mainData, 7200);
         //When
         CurrentWeather response = mapper.mapToCurrentWeather(openWeatherData);
         //Then
         Assert.assertEquals(200, response.getHttpCode());
         Assert.assertEquals("Cloudy", response.getWeatherCondition());
-        Assert.assertEquals(15.4, response.getTemperature(), 0.1);
+        Assert.assertEquals(15, response.getTemperature());
         Assert.assertEquals(1599132348, response.getTimestamp());
         Assert.assertEquals("2020-09-03 05:58:47", response.getSunriseDateTime());
         Assert.assertEquals("2020-09-03 19:20:50", response.getSunsetDateTime());

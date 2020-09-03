@@ -30,7 +30,7 @@ public class OpenWeatherClientTestSuite {
         Assert.assertTrue(response.getTimestamp() > 0L);
         Assert.assertTrue(response.getSystemData().getSunriseTimestamp() > 0L);
         Assert.assertTrue(response.getSystemData().getSunsetTimestamp() > 0L);
-        Assert.assertTrue(-50.0 < response.getMainData().getTemperature());
-        Assert.assertTrue(60.0 > response.getMainData().getTemperature());
+        Assert.assertTrue(-50 < response.getMainData().getTemperature());
+        Assert.assertTrue(60 > response.getMainData().getTemperature());
     }
 }

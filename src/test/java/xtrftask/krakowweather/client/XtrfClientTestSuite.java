@@ -19,7 +19,7 @@ public class XtrfClientTestSuite {
     @Test
     public void testPostingCurrentWeather() throws JsonProcessingException {
         //Given
-        CurrentWeatherDto currentWeatherDto = new CurrentWeatherDto("Cloudy", 15.4, 1599132348, "2020-09-03 05:58:47", "2020-09-03 19:20:50");
+        CurrentWeatherDto currentWeatherDto = new CurrentWeatherDto("Cloudy", 15, 1599132348, "2020-09-03 05:58:47", "2020-09-03 19:20:50");
         //When
         boolean response = client.postCurrentWeather(currentWeatherDto);
         //Then
